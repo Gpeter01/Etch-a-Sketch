@@ -28,3 +28,26 @@ h1 {
     font-size: 6rem;
     text-decoration: underline solid black 2px;
 }
+.main-container {
+    display: flex;
+    width: 100vw;
+}
+.second-container,
+.first-container {
+    display: flex;
+    padding: 3rem;
+}
+.first-container {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    font-size: 2rem;
+    text-align: center;
+}
+.second-container {
+    position: relative;
+    align-items: center;
+    width: 60vw;
+    padding: 7rem;
+}
