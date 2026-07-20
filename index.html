@@ -8,19 +8,29 @@
     <script src="script.js" defer></script>
     <title>Etch a sketch</title>
 </head>
-<body>
-    <h1 class="header"><i>Etch a Sketch</i></h1>
-    <div class="main-container">
-        <div class="first-container">
-            <p class="size-of-grid">This is a 4 x 4 grid</p>
-            <p class="sentence">Type a number below for a different grid e.g 10</p>
-            <label for="grid-choice">Grid Choice</label>
-            <div class="grid-container">
-                <input type="text" id="grid-choice" name="grid-choice" required>
-                <button class="submit">Submit</button>
+<body class="content">
+    <div class="overall-content">
+        <div class="header-container">
+            <h1 class="header"><i>Etch a Sketch</i></h1>
+        </div>
+        <div class="main-container">
+            <div class="first-container">
+                <p class="size-of-grid"><i>4 x 4 grid here</i></p>
+                <p class="sentence"><i>Type a number below for a different grid e.g 10</i></p>
+                <label for="grid-choice"><i>Grid Choice</i></label>
+                <div class="grid-container">
+                    <input type="text" class="grid-choice" name="grid-choice" required>
+                    <button class="submit"><i>Submit</i></button>
+                </div>
+                <p class="result"></p>
+            </div>
+            <div class="second-container">
+                <div class="etch"></div>
+                <div class="z-container">
+                    <p class="main-sentence"><i>Etch a sketch here</i></p>
+                </div>
             </div>
         </div>
-        <div class="second-container"></div>
-    </div>
+    <div>
 </body>
 </html>
