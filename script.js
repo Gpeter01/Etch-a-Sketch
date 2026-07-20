@@ -39,3 +39,37 @@ function getBorderRadius(numberOfDivs, squareOfNumberOfDivs) {
     const miniDivBottomRightCorner = document.querySelector(`.miniDiv${squareOfNumberOfDivs}`);
     miniDivBottomRightCorner.style.borderBottomRightRadius = '2rem';
 }
+function getRandomNumber() {
+    let randomNumber = Math.floor(Math.random() * 100);
+    return randomNumber;
+}
+function changeSentenceOpacity() {
+    const mainSentence = document.querySelector('.main-sentence');
+    mainSentence.style.opacity = 0;
+}
+let incrementer = 1;
+function changeColor(event) {
+    const mainSentence = document.querySelector('.main-sentence');
+    const mainSentenceStyle = getComputedStyle(mainSentence);
+    if (mainSentenceStyle.opacity == 1) {
+        changeSentenceOpacity();
+    }
+    const mainTarget = event.target;
+    const styleOfMainTarget = getComputedStyle(mainTarget);
+    if (styleOfMainTarget.backgroundColor == 'rgb(255, 255, 255)' && styleOfMainTarget.opacity == 0) {
+        const redContext = getRandomNumber();
+        const blueContext = getRandomNumber();
+        const greenContext = getRandomNumber();
+        mainTarget.style.backgroundColor = `rgb(${redContext}, ${blueContext}, ${greenContext})`;
+        let newOpacity = 0.1 * incrementer;
+        mainTarget.style.opacity = newOpacity;
+        if (incrementer < 10) {
+            incrementer++;
+        } else {
+            return;
+        }
+    } else {
+        return;
+    }
+}
+document.querySelector('.etch').addEventListener('mouseover', changeColor);
