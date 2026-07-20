@@ -10,3 +10,4 @@ function etchSize() {
     zContainer.style.width = size;
     zContainer.style.height = size;
 }
+etchSize();
