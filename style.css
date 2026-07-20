@@ -96,3 +96,8 @@ button {
     font-size: 4.25rem;
     transition: opacity 750ms ease-in-out;
 }
+@container container-z (inline-size <= 400px) {
+    .main-sentence {
+        font-size: 15cqi;
+    }
+}
