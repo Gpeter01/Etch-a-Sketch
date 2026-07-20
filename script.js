@@ -73,3 +73,25 @@ function changeColor(event) {
     }
 }
 document.querySelector('.etch').addEventListener('mouseover', changeColor);
+function submitInput(event) {
+    const userInput = document.querySelector('.grid-choice');
+    const computedUserInput = parseInt(userInput.value);
+    const result = document.querySelector('.result');
+    result.textContent = '';
+    result.style.opacity = 0;
+    const sizeOfGrid = document.querySelector('.size-of-grid');
+    if (computedUserInput == 0 || (Number.isNaN(computedUserInput) == true)) {
+        result.textContent = 'Type in a valid number';
+        result.style.opacity = 1;
+    } else {
+        sizeOfGrid.textContent = `${computedUserInput} x ${computedUserInput} grid here`;
+        const numberOfDiv = computedUserInput * computedUserInput;
+        const newWidth = findWidth(computedUserInput);
+        const etch = document.querySelector('.etch');
+        etch.innerHTML = '';
+        incrementer = 1;
+        makeDivs(numberOfDiv, newWidth, newWidth, computedUserInput);
+    }
+}
+const button = document.querySelector('.submit');
+button.addEventListener('click', submitInput);
