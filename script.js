@@ -95,3 +95,8 @@ function submitInput(event) {
 }
 const button = document.querySelector('.submit');
 button.addEventListener('click', submitInput);
+
+const numberPerColumnsAndRow = 4;
+const width = findWidth(numberPerColumnsAndRow);
+const numberOfDivs = numberPerColumnsAndRow * numberPerColumnsAndRow;
+makeDivs(numberOfDivs, width, width, numberPerColumnsAndRow);
