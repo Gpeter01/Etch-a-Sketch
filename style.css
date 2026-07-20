@@ -8,3 +8,6 @@
 body {
     background-color: rgba(47, 41, 109, 0.5);
 }
+html {
+    line-height: 1.5;
+}
